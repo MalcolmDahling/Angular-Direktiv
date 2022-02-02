@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
     selector: '[appChange]'
@@ -16,5 +16,7 @@ export class ChangeDirective {
         (this.el.nativeElement as HTMLElement).style.backgroundColor = 'transparent';
     }
 
+    @Input('appChange');
+
 }
-//fortsätt på 13.
+
