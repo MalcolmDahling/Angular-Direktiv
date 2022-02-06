@@ -11,7 +11,7 @@ export class ChangeDirective {
     @HostListener('mouseenter') onMouseEnter(){
         (this.el.nativeElement as HTMLElement).style.backgroundColor = 'red';
 
-        (this.el.nativeElement as HTMLElement).style.transition = 'all' + animationSpeed + 's'; 
+        (this.el.nativeElement as HTMLElement).style.transition = 'all ' + this.animationSpeed + 's'; 
     }
 
     @HostListener('mouseleave') onMouseLeave(){
@@ -19,7 +19,7 @@ export class ChangeDirective {
     }
 
 
-    @Input('appChange');
+    @Input('appChange') animationSpeed:any;
 
 }
 
